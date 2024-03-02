@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 public class tempMonitorFragment extends Fragment {
@@ -32,6 +33,8 @@ public class tempMonitorFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.backstep).setOnClickListener(v -> getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new mainPageFragment()).commit());
+        view.findViewById(R.id.backstep).setOnClickListener(v -> {
+            ((MainActivity)requireActivity()).switchToMainPage();
+        });
     }
 }

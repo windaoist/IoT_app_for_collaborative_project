@@ -9,7 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
+
+import java.util.Objects;
 
 
 public class mainPageFragment extends Fragment {
@@ -34,6 +37,8 @@ public class mainPageFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.poly1).setOnClickListener(v -> getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new tempMonitorFragment()).commit());
+        view.findViewById(R.id.poly1).setOnClickListener(v -> {
+            ((MainActivity)requireActivity()).switchToTempMonitor();
+        });
     }
 }

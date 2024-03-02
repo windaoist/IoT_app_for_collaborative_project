@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 public class bottomMenuFragment extends Fragment {
@@ -38,7 +39,7 @@ public class bottomMenuFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //转换事件监听器
-        view.findViewById(R.id.homepageText).setOnClickListener(v -> getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new mainPageFragment()).commit());
-        view.findViewById(R.id.deviceText).setOnClickListener(v -> getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_main, new devicePageFragment()).commit());
+        view.findViewById(R.id.homepageText).setOnClickListener(v -> ((MainActivity) requireActivity()).switchToMainPage());
+        view.findViewById(R.id.deviceText).setOnClickListener(v -> ((MainActivity) requireActivity()).switchToDevicePage());
     }
 }

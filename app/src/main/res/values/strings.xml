@@ -36,4 +36,8 @@
     <string name="snowflake">雪花</string>
     <string name="temp_config">温度调节</string>
     <string name="wind_speed_config">风速调节</string>
+    <string name="hundred">100</string>
+    <string name="zero">0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
