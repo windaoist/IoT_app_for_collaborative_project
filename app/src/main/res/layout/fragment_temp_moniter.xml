@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tempMonitorFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backstep"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/backstep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/TempMonitorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/thermograph"
+        android:textAppearance="@style/pmzd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec1"
+        android:layout_width="360dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/royalblue"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="@id/rec1"
+        app:layout_constraintTop_toTopOf="@id/rec1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/refrigerationImg"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:contentDescription="@string/refrigeration"
+        android:outlineAmbientShadowColor="@color/grey"
+        android:src="@drawable/refrigeration"
+        app:layout_constraintBottom_toBottomOf="@+id/rec2"
+        app:layout_constraintEnd_toEndOf="@id/rec2"
+        app:layout_constraintStart_toStartOf="@id/rec2"
+        app:layout_constraintTop_toTopOf="@id/rec2"
+        tools:targetApi="p" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refrigeration"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/rec2"
+        app:layout_constraintStart_toStartOf="@id/rec2"
+        app:layout_constraintTop_toBottomOf="@id/rec2" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/intelSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="64dp"
+        android:contentDescription="@string/intelligent_regulation"
+        android:text="@string/intelligent_regulation"
+        android:textSize="14sp"
+        android:theme="@style/normalSwitch"
+        app:layout_constraintBottom_toTopOf="@id/oneTouchSwitch"
+        app:layout_constraintEnd_toEndOf="@id/rec1"
+        app:layout_constraintTop_toTopOf="@id/rec1"
+        app:switchMinWidth="60dp"
+        app:switchPadding="64dp"
+        app:switchTextAppearance="@style/sourcehansans" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/oneTouchSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:contentDescription="@string/one_touch_switch"
+        android:text="@string/one_touch_switch"
+        android:textSize="14sp"
+        android:theme="@style/normalSwitch"
+        app:layout_constraintBottom_toBottomOf="@id/rec1"
+        app:layout_constraintEnd_toEndOf="@id/intelSwitch"
+        app:layout_constraintTop_toBottomOf="@id/intelSwitch"
+        app:switchMinWidth="60dp"
+        app:switchPadding="64dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1.2"
+        android:layout_width="247.5dp"
+        android:layout_height="247.5dp"
+        app:cardBackgroundColor="@color/aliceblue"
+        app:layout_constraintBottom_toBottomOf="@+id/round1.1"
+        app:layout_constraintEnd_toEndOf="@id/round1.1"
+        app:layout_constraintStart_toStartOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@+id/round1.1"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1.1"
+        android:layout_width="212.75dp"
+        android:layout_height="212.75dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec1"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.example.myapplication.widget.SectorView
+        android:id="@+id/externalRing"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        app:layout_constraintBottom_toBottomOf="@+id/round1.1"
+        app:layout_constraintEnd_toEndOf="@id/round1.1"
+        app:layout_constraintStart_toStartOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@+id/round1.1"
+        app:sectorGradientEnd="@color/magenta"
+        app:sectorGradientStart="@color/blue"
+        app:sectorRadius="125dp"
+        app:sectorStartAngle="120"
+        app:sectorStroke="8dp"
+        app:sectorSweepAngle="240" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/clock"
+        app:layout_constraintBottom_toBottomOf="@+id/round1.1"
+        app:layout_constraintEnd_toEndOf="@id/round1.1"
+        app:layout_constraintStart_toStartOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@+id/round1.1" />
+
+    <com.example.myapplication.widget.SectorView
+        android:id="@+id/internalRing"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:layout_constraintBottom_toBottomOf="@+id/round1.1"
+        app:layout_constraintEnd_toEndOf="@id/round1.1"
+        app:layout_constraintStart_toStartOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@+id/round1.1"
+        app:sectorGradientEnd="@color/white"
+        app:sectorGradientStart="@color/royalblue"
+        app:sectorRadius="100dp"
+        app:sectorStartAngle="90"
+        app:sectorStroke="12dp"
+        app:sectorSweepAngle="180" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:text="@string/current_indoor_temp"
+        android:textAppearance="@style/sourcehansans"
+        android:textColor="@color/lightblack"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/round1.1"
+        app:layout_constraintStart_toStartOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@+id/round1.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mainTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="24"
+        android:textAppearance="@style/harmonysans"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@id/round1.1"
+        app:layout_constraintStart_toStartOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@+id/round1.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/degrees_celsius"
+        android:textAppearance="@style/harmonysans"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/mainTempText"
+        app:layout_constraintTop_toTopOf="@+id/mainTempText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec3.1"
+        android:layout_width="172dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="44dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toStartOf="@id/rec3.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round1.1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/thermograph_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/thermograph_alt"
+        app:layout_constraintBottom_toBottomOf="@id/rec3.1"
+        app:layout_constraintStart_toStartOf="@id/rec3.1"
+        app:layout_constraintTop_toTopOf="@id/rec3.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/indoorTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/current_temp"
+        android:textAppearance="@style/sourcehansans"
+        android:textColor="@color/royalblue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/thermograph_alt"
+        app:layout_constraintTop_toTopOf="@id/rec3.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/indoorTempAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-15dp"
+        android:text="24℃"
+        android:textAppearance="@style/harmonysans"
+        android:textColor="@color/royalblue"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/indoorTempText"
+        app:layout_constraintTop_toBottomOf="@id/indoorTempText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec3.2"
+        android:layout_width="172dp"
+        android:layout_height="83dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rec3.1"
+        app:layout_constraintTop_toTopOf="@id/rec3.1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/snowflake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/snowflake"
+        app:layout_constraintBottom_toBottomOf="@id/rec3.2"
+        app:layout_constraintStart_toStartOf="@id/rec3.2"
+        app:layout_constraintTop_toTopOf="@id/rec3.2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/presetTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/preset_temp"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/snowflake"
+        app:layout_constraintTop_toTopOf="@id/rec3.2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/presetTempAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-15dp"
+        android:text="20℃"
+        android:textAppearance="@style/harmonysans"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/presetTempText"
+        app:layout_constraintTop_toBottomOf="@id/presetTempText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tempConfigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/temp_config"
+        android:textAppearance="@style/sourcehansans"
+        android:textColor="@color/royalblue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec3.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/configTempAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="24℃"
+        android:textAppearance="@style/harmonysans"
+        android:textColor="@color/royalblue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tempConfigText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minusButton"
+        android:layout_width="49dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/ghostwhite"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/configTempAmount"
+        app:layout_constraintEnd_toStartOf="@id/configTempAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/configTempAmount" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/minus"
+        app:layout_constraintBottom_toBottomOf="@id/minusButton"
+        app:layout_constraintEnd_toEndOf="@id/minusButton"
+        app:layout_constraintStart_toStartOf="@id/minusButton"
+        app:layout_constraintTop_toTopOf="@id/minusButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/additionButton"
+        android:layout_width="49dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/ghostwhite"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/configTempAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/configTempAmount"
+        app:layout_constraintTop_toTopOf="@id/configTempAmount" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/addition"
+        app:layout_constraintBottom_toBottomOf="@id/additionButton"
+        app:layout_constraintEnd_toEndOf="@id/additionButton"
+        app:layout_constraintStart_toStartOf="@id/additionButton"
+        app:layout_constraintTop_toTopOf="@id/additionButton" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec4"
+        android:layout_width="363dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="22dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/configTempAmount"
+        app:strokeWidth="0dp" />
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/windSpeedConfigText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/wind_speed_config"
+    android:textAppearance="@style/sourcehansans"
+    android:textSize="16sp"
+    android:textColor="@color/royalblue"
+    app:layout_constraintTop_toTopOf="@id/rec4"
+    app:layout_constraintStart_toStartOf="@id/rec4"
+    app:layout_constraintEnd_toEndOf="@id/rec4"
+    />
+    <com.google.android.material.slider.Slider
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+
+        app:layout_constraintTop_toTopOf="@id/rec4"
+        app:layout_constraintStart_toStartOf="@id/rec4"
+        app:layout_constraintEnd_toEndOf="@id/rec4"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

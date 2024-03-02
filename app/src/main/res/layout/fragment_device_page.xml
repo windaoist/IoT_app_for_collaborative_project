@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/lightgrey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/myDeviceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:gravity="top"
+        android:text="@string/my_device"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintStart_toEndOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/additionImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="102dp"
+        android:contentDescription="@string/addition"
+        android:src="@drawable/addition_circle"
+        app:layout_constraintBottom_toBottomOf="@id/myDeviceText"
+        app:layout_constraintStart_toEndOf="@id/myDeviceText"
+        app:layout_constraintTop_toTopOf="@id/myDeviceText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/allText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/all"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/allDivideLine"
+        android:layout_width="3dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        app:cardBackgroundColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/allText"
+        app:layout_constraintStart_toEndOf="@id/allText"
+        app:layout_constraintTop_toTopOf="@id/allText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/loungeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lounge"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/bedroomText"
+        app:layout_constraintStart_toEndOf="@id/allDivideLine"
+        app:layout_constraintTop_toTopOf="@id/allText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/bedroomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bedroom"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/kitchenText"
+        app:layout_constraintStart_toEndOf="@id/loungeText"
+        app:layout_constraintTop_toTopOf="@id/allText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/kitchenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="63dp"
+        android:text="@string/kitchen"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bedroomText"
+        app:layout_constraintTop_toTopOf="@id/allText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="30dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="-12dp"
+        app:cardBackgroundColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/allText"
+        app:layout_constraintStart_toStartOf="@id/allText"
+        app:layout_constraintTop_toBottomOf="@id/allText" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="65dp"
+        android:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round1">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/exampleDeviceCardCons"
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/exampleDeviceCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/lavender"
+                    app:cardCornerRadius="20dp"
+                    app:strokeWidth="0dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/exampleDeviceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="扫地机器人"
+                    android:textAppearance="@style/sourcehansans"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lounge"
+                    android:textColor="@color/grey"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="@id/exampleDeviceName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/exampleDeviceName"
+                    app:layout_constraintTop_toTopOf="@id/exampleDeviceName" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deviceButton1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="9dp"
+                    android:checkable="true"
+
+                    style="@style/uncheckedSwitch"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/greyswitch"
+                    app:layout_constraintTop_toTopOf="@id/deviceButton1"
+                    app:layout_constraintEnd_toEndOf="@id/deviceButton1"
+                    app:layout_constraintBottom_toBottomOf="@id/deviceButton1"
+                    app:layout_constraintStart_toStartOf="@id/deviceButton1"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/exampleDeviceCardConsP"
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/exampleDeviceCardP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/lavender"
+                    app:cardCornerRadius="20dp"
+                    app:strokeWidth="0dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/exampleDeviceNameP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="宠物投喂器"
+                    android:textAppearance="@style/sourcehansans"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lounge"
+                    android:textColor="@color/grey"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="@id/exampleDeviceNameP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/exampleDeviceNameP"
+                    app:layout_constraintTop_toTopOf="@id/exampleDeviceNameP" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deviceButton2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="9dp"
+                    style="@style/checkedSwitch"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/greyswitch"
+                    android:tint="@color/royalblue"
+                    app:layout_constraintTop_toTopOf="@id/deviceButton2"
+                    app:layout_constraintEnd_toEndOf="@id/deviceButton2"
+                    app:layout_constraintBottom_toBottomOf="@id/deviceButton2"
+                    app:layout_constraintStart_toStartOf="@id/deviceButton2"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="175dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/lavender"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp" />
+        </GridLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

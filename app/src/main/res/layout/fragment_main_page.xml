@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="27dp"
+        android:gravity="top"
+        android:text="@string/welcome"
+        android:textAppearance="@style/pmzd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round3"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="41dp"
+        app:cardBackgroundColor="@color/lightpurple"
+        app:layout_constraintBottom_toBottomOf="@id/welcomeTextView"
+        app:layout_constraintStart_toEndOf="@id/welcomeTextView"
+        app:layout_constraintTop_toTopOf="@id/welcomeTextView"
+        app:shapeAppearance="@style/circle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="@color/mediumpurple"
+        app:layout_constraintBottom_toBottomOf="@id/round3"
+        app:layout_constraintEnd_toEndOf="@id/round3"
+        app:layout_constraintStart_toStartOf="@id/round3"
+        app:layout_constraintTop_toTopOf="@id/round3"
+        app:shapeAppearance="@style/circle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/microphone"
+        android:src="@drawable/microphone"
+        app:layout_constraintBottom_toBottomOf="@id/round3"
+        app:layout_constraintEnd_toEndOf="@id/round3"
+        app:layout_constraintStart_toStartOf="@id/round3"
+        app:layout_constraintTop_toTopOf="@id/round3" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec2"
+        android:layout_width="368dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/main_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+        app:shapeAppearanceOverlay="@drawable/main_gradient" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec5"
+        android:layout_width="368dp"
+        android:layout_height="85dp"
+        app:cardBackgroundColor="@color/mediumpurple"
+        app:layout_constraintBottom_toBottomOf="@id/rec2"
+        app:layout_constraintEnd_toEndOf="@id/rec2"
+        app:layout_constraintStart_toStartOf="@id/rec2"
+        app:cardCornerRadius="20dp"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/homeTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/home_temp"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/divideLine1"
+        app:layout_constraintStart_toStartOf="@id/rec5"
+        app:layout_constraintTop_toTopOf="@id/rec5" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appropriate"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/homeTempText"
+        app:layout_constraintEnd_toEndOf="@id/homeTempText"
+        app:layout_constraintStart_toStartOf="@id/homeTempText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/divideLine1"
+        android:layout_width="3dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/rec5"
+        app:layout_constraintEnd_toStartOf="@id/homeHumidityText"
+        app:layout_constraintStart_toEndOf="@id/homeTempText"
+        app:layout_constraintTop_toTopOf="@id/rec5" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/homeHumidityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_humidity"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/divideLine2"
+        app:layout_constraintStart_toEndOf="@id/divideLine1"
+        app:layout_constraintTop_toTopOf="@id/homeTempText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appropriate"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/homeHumidityText"
+        app:layout_constraintEnd_toEndOf="@id/homeHumidityText"
+        app:layout_constraintStart_toStartOf="@id/homeHumidityText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/divideLine2"
+        android:layout_width="3dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/homeAirText"
+        app:layout_constraintStart_toEndOf="@id/homeHumidityText"
+        app:layout_constraintTop_toTopOf="@id/divideLine1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/homeAirText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/airquality"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/rec5"
+        app:layout_constraintStart_toEndOf="@id/divideLine2"
+        app:layout_constraintTop_toTopOf="@id/homeTempText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/good"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/homeAirText"
+        app:layout_constraintEnd_toEndOf="@id/homeAirText"
+        app:layout_constraintStart_toStartOf="@id/homeAirText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1.1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/lightgrey"
+        app:layout_constraintStart_toStartOf="@id/rec2"
+        app:layout_constraintTop_toTopOf="@id/rec2"
+        app:shapeAppearance="@style/circle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/owner"
+        android:textAppearance="@style/pmzd"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@id/round1.1"
+        app:layout_constraintStart_toEndOf="@id/round1.1"
+        app:layout_constraintTop_toTopOf="@id/round1.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/roomsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/rooms"
+        android:textAppearance="@style/pmzd"
+        android:textSize="33sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec4.1"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="29dp"
+        app:cardBackgroundColor="@color/steelblue"
+        app:layout_constraintEnd_toStartOf="@id/rec4.2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomsTextView"
+        app:cardCornerRadius="20dp"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bedroom"
+        android:textAppearance="@style/pmzd"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/rec4.1"
+        app:layout_constraintEnd_toEndOf="@id/rec4.1"
+        app:layout_constraintStart_toStartOf="@id/rec4.1"
+        app:layout_constraintTop_toTopOf="@id/rec4.1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec4.2"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        app:cardBackgroundColor="@color/steelblue"
+        app:layout_constraintEnd_toStartOf="@id/rec4.3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/rec4.1"
+        app:layout_constraintTop_toTopOf="@id/rec4.1"
+        app:cardCornerRadius="20dp"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lounge"
+        android:textAppearance="@style/pmzd"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/rec4.2"
+        app:layout_constraintEnd_toEndOf="@id/rec4.2"
+        app:layout_constraintStart_toStartOf="@id/rec4.2"
+        app:layout_constraintTop_toTopOf="@id/rec4.2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec4.3"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        app:cardBackgroundColor="@color/steelblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/rec4.2"
+        app:layout_constraintTop_toTopOf="@id/rec4.2"
+        app:cardCornerRadius="20dp"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kitchen"
+        android:textAppearance="@style/pmzd"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/rec4.3"
+        app:layout_constraintEnd_toEndOf="@id/rec4.3"
+        app:layout_constraintStart_toStartOf="@id/rec4.3"
+        app:layout_constraintTop_toTopOf="@id/rec4.3" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/poly1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="@color/lightsalmon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec4.1"
+        app:shapeAppearance="@style/diamond"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/thermograph"
+        android:textAppearance="@style/pmzd"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@id/poly1"
+        app:layout_constraintStart_toStartOf="@id/poly1"
+        app:layout_constraintTop_toTopOf="@id/poly1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/poly2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="115dp"
+        app:cardBackgroundColor="@color/khaki"
+        app:layout_constraintStart_toStartOf="@id/poly1"
+        app:layout_constraintTop_toTopOf="@id/poly1"
+        app:shapeAppearance="@style/diamond"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/humidity"
+        android:textAppearance="@style/pmzd"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@id/poly2"
+        app:layout_constraintStart_toStartOf="@id/poly2"
+        app:layout_constraintTop_toTopOf="@id/poly2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/poly3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="115dp"
+        app:cardBackgroundColor="@color/aquamarine"
+        app:layout_constraintStart_toStartOf="@id/poly2"
+        app:layout_constraintTop_toTopOf="@id/poly1"
+        app:shapeAppearance="@style/diamond"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:text="@string/airquality"
+        android:textAppearance="@style/pmzd"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@id/poly3"
+        app:layout_constraintStart_toStartOf="@id/poly3"
+        app:layout_constraintTop_toTopOf="@id/poly3" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="26dp"
+        android:contentDescription="@string/thermograph"
+        android:src="@drawable/thermograph"
+        app:layout_constraintEnd_toEndOf="@id/poly1"
+        app:layout_constraintStart_toStartOf="@id/poly1"
+        app:layout_constraintTop_toTopOf="@id/poly1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="26dp"
+        android:contentDescription="@string/humidity"
+        android:src="@drawable/humidity"
+        app:layout_constraintEnd_toEndOf="@id/poly2"
+        app:layout_constraintStart_toStartOf="@id/poly2"
+        app:layout_constraintTop_toTopOf="@id/poly2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="26dp"
+        android:contentDescription="@string/airquality"
+        android:src="@drawable/airquality"
+        app:layout_constraintEnd_toEndOf="@id/poly3"
+        app:layout_constraintStart_toStartOf="@id/poly3"
+        app:layout_constraintTop_toTopOf="@id/poly3" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec1.1"
+        android:layout_width="172dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toStartOf="@id/rec1.2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poly1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1.2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        app:cardBackgroundColor="@color/lavender"
+        app:layout_constraintBottom_toBottomOf="@id/rec1.1"
+        app:layout_constraintStart_toStartOf="@id/rec1.1"
+        app:layout_constraintTop_toTopOf="@id/rec1.1"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/pet"
+        android:src="@drawable/dog"
+        app:layout_constraintBottom_toBottomOf="@id/round1.2"
+        app:layout_constraintEnd_toEndOf="@id/round1.2"
+        app:layout_constraintStart_toStartOf="@id/round1.2"
+        app:layout_constraintTop_toTopOf="@id/round1.2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/petText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/pet"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/rec1.1"
+        app:layout_constraintStart_toEndOf="@id/round1.2"
+        app:layout_constraintTop_toTopOf="@id/rec1.1" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:contentDescription="@string/pet"
+        android:theme="@style/normalSwitch"
+        app:layout_constraintEnd_toEndOf="@id/rec1.1"
+        app:layout_constraintStart_toEndOf="@id/round1.2"
+        app:layout_constraintTop_toBottomOf="@id/petText"
+        app:switchMinWidth="48dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec1.2"
+        android:layout_width="172dp"
+        android:layout_height="83dp"
+        app:cardBackgroundColor="@color/ghostwhite"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/rec1.1"
+        app:layout_constraintTop_toTopOf="@id/rec1.1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1.3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        app:cardBackgroundColor="@color/lavender"
+        app:layout_constraintBottom_toBottomOf="@id/rec1.2"
+        app:layout_constraintStart_toStartOf="@id/rec1.2"
+        app:layout_constraintTop_toTopOf="@id/rec1.2"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/clean"
+        android:src="@drawable/clean"
+        app:layout_constraintBottom_toBottomOf="@id/round1.3"
+        app:layout_constraintEnd_toEndOf="@id/round1.3"
+        app:layout_constraintStart_toStartOf="@id/round1.3"
+        app:layout_constraintTop_toTopOf="@id/round1.3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cleanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/clean"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/rec1.2"
+        app:layout_constraintStart_toEndOf="@id/round1.3"
+        app:layout_constraintTop_toTopOf="@id/rec1.2" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:contentDescription="@string/clean"
+        android:theme="@style/normalSwitch"
+        app:layout_constraintEnd_toEndOf="@id/rec1.2"
+        app:layout_constraintStart_toEndOf="@id/round1.3"
+        app:layout_constraintTop_toBottomOf="@id/cleanText"
+        app:switchMinWidth="48dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
