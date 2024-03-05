@@ -40,5 +40,8 @@ public class mainPageFragment extends Fragment {
         view.findViewById(R.id.poly1).setOnClickListener(v -> {
             ((MainActivity)requireActivity()).switchToTempMonitor();
         });
+        view.findViewById(R.id.poly2).setOnClickListener(v -> {
+            ((MainActivity)requireActivity()).switchToHumidityMonitor();
+        });
     }
 }

@@ -128,7 +128,7 @@
         app:shapeAppearance="@style/circle"
         app:strokeWidth="0dp" />
 
-    <com.example.myapplication.widget.SectorView
+    <com.example.myapplication.widget.ArcView
         android:id="@+id/externalRing"
         android:layout_width="260dp"
         android:layout_height="260dp"
@@ -136,12 +136,12 @@
         app:layout_constraintEnd_toEndOf="@id/round1.1"
         app:layout_constraintStart_toStartOf="@id/round1.1"
         app:layout_constraintTop_toTopOf="@+id/round1.1"
-        app:sectorGradientEnd="@color/magenta"
-        app:sectorGradientStart="@color/blue"
-        app:sectorRadius="125dp"
-        app:sectorStartAngle="120"
-        app:sectorStroke="8dp"
-        app:sectorSweepAngle="240" />
+        app:arcGradientEnd="@color/magenta"
+        app:arcGradientStart="@color/blue"
+        app:arcRadius="125dp"
+        app:arcStartAngle="120"
+        app:arcStroke="8dp"
+        app:arcSweepAngle="240" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/scale"
@@ -153,7 +153,7 @@
         app:layout_constraintStart_toStartOf="@id/round1.1"
         app:layout_constraintTop_toTopOf="@+id/round1.1" />
 
-    <com.example.myapplication.widget.SectorView
+    <com.example.myapplication.widget.ArcView
         android:id="@+id/internalRing"
         android:layout_width="220dp"
         android:layout_height="220dp"
@@ -161,12 +161,12 @@
         app:layout_constraintEnd_toEndOf="@id/round1.1"
         app:layout_constraintStart_toStartOf="@id/round1.1"
         app:layout_constraintTop_toTopOf="@+id/round1.1"
-        app:sectorGradientEnd="@color/white"
-        app:sectorGradientStart="@color/royalblue"
-        app:sectorRadius="100dp"
-        app:sectorStartAngle="90"
-        app:sectorStroke="12dp"
-        app:sectorSweepAngle="180" />
+        app:arcGradientEnd="@color/white"
+        app:arcGradientStart="@color/royalblue"
+        app:arcRadius="100dp"
+        app:arcStartAngle="90"
+        app:arcStroke="12dp"
+        app:arcSweepAngle="180" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/currentText"
@@ -392,7 +392,7 @@
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
-        android:value="90"
+        android:value="40"
         android:valueFrom="1"
         android:valueTo="100"
         app:tickVisible="true"

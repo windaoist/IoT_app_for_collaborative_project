@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.myapplication.ui.devicePageFragment;
+import com.example.myapplication.ui.humidityMonitorFragment;
 import com.example.myapplication.ui.mainPageFragment;
 import com.example.myapplication.ui.tempMonitorFragment;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private mainPageFragment mainPage;
     private tempMonitorFragment tempMonitor;
     private devicePageFragment devicePage;
+    private humidityMonitorFragment humidityMonitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         mainPage = new mainPageFragment();
         tempMonitor = new tempMonitorFragment();
+        humidityMonitor=new humidityMonitorFragment();
         devicePage = new devicePageFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bottomBarFragment).setVisibility(View.GONE);
     }
 
+    public void switchToHumidityMonitor() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, humidityMonitor).commit();
+        //隐藏导航栏
+        findViewById(R.id.bottomBarFragment).setVisibility(View.GONE);
+    }
     public void switchToDevicePage() {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main, devicePage).commit();
         findViewById(R.id.bottomBarFragment).setVisibility(View.VISIBLE);

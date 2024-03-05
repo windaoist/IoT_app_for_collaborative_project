@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcView">
+<!--        兼容用系统属性-->
+        <attr name="android:layout_width" format="dimension"/>
+        <attr name="android:layout_height" format="dimension"/>
+<!--        自定义属性-->
+        <attr name="arcRadius" format="dimension" />
+        <attr name="arcStroke" format="dimension"/>
+        <attr name="arcStartAngle" format="float"/>
+        <attr name="arcSweepAngle" format="float"/>
+        <attr name="arcGradientStart" format="color"/>
+        <attr name="arcGradientEnd" format="color"/>
+    </declare-styleable>
+</resources>

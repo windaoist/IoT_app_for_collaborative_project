@@ -1,10 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.humidityMonitorFragment">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backstep"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/backstep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/TempMonitorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/humidity"
+        android:textAppearance="@style/pmzd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec1"
+        android:layout_width="360dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="65dp"
+        app:cardBackgroundColor="@color/cornsilk"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec2.1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/goldenrod"
+        app:layout_constraintEnd_toStartOf="@id/rec2.2"
+        app:layout_constraintStart_toStartOf="@id/rec1"
+        app:layout_constraintTop_toTopOf="@id/rec1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/humidifierImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/humidifier"
+        app:layout_constraintBottom_toBottomOf="@id/rec2.1"
+        app:layout_constraintEnd_toEndOf="@id/rec2.1"
+        app:layout_constraintStart_toStartOf="@id/rec2.1"
+        app:layout_constraintTop_toTopOf="@id/rec2.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/humidifierText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/humidifier"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/rec2.1"
+        app:layout_constraintStart_toStartOf="@+id/rec2.1"
+        app:layout_constraintTop_toBottomOf="@id/rec2.1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec2.2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="@color/goldenrod"
+        app:layout_constraintEnd_toEndOf="@id/rec1"
+        app:layout_constraintStart_toEndOf="@id/rec2.1"
+        app:layout_constraintTop_toTopOf="@id/rec2.1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/dehumidifyImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dehumidify"
+        app:layout_constraintBottom_toBottomOf="@id/rec2.2"
+        app:layout_constraintEnd_toEndOf="@id/rec2.2"
+        app:layout_constraintStart_toStartOf="@id/rec2.2"
+        app:layout_constraintTop_toTopOf="@id/rec2.2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dehumidifyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dehumidify"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/rec2.2"
+        app:layout_constraintStart_toStartOf="@+id/rec2.2"
+        app:layout_constraintTop_toBottomOf="@id/rec2.2" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/humidifierSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:theme="@style/normalSwitch"
+        app:layout_constraintEnd_toEndOf="@id/rec2.1"
+        app:layout_constraintStart_toStartOf="@+id/rec2.1"
+        app:layout_constraintTop_toBottomOf="@id/rec2.1"
+        app:switchMinWidth="55dp" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/dehumidifySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:theme="@style/normalSwitch"
+        app:layout_constraintEnd_toEndOf="@id/rec2.2"
+        app:layout_constraintStart_toStartOf="@+id/rec2.2"
+        app:layout_constraintTop_toBottomOf="@id/rec2.2"
+        app:switchMinWidth="55dp" />
+
+    <com.example.myapplication.widget.SectorView
+        android:id="@+id/backgroundSector"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintEnd_toEndOf="@id/round1"
+        app:layout_constraintStart_toStartOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1"
+        app:sectorColor="@color/linen"
+        app:sectorRadius="105dp"
+        app:sectorStartAngle="135"
+        app:sectorSweepAngle="270" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec1"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.example.myapplication.widget.ArcView
+        android:id="@+id/yellowShadowRight"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:arcGradientEnd="@color/goldenrod"
+        app:arcGradientStart="@color/white"
+        app:arcRadius="86.5dp"
+        app:arcStartAngle="0"
+        app:arcStroke="3dp"
+        app:arcSweepAngle="90"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintEnd_toEndOf="@id/round1"
+        app:layout_constraintStart_toStartOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1" />
+
+    <com.example.myapplication.widget.ArcView
+        android:id="@+id/yellowShadowLeft"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:arcGradientEnd="@color/white"
+        app:arcGradientStart="@color/goldenrod"
+        app:arcRadius="86.5dp"
+        app:arcStartAngle="90"
+        app:arcStroke="3dp"
+        app:arcSweepAngle="90"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintEnd_toEndOf="@id/round1"
+        app:layout_constraintStart_toStartOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/humidityMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:src="@drawable/clock_alt"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintEnd_toEndOf="@id/backgroundSector"
+        app:layout_constraintStart_toStartOf="@id/backgroundSector"
+        app:layout_constraintTop_toTopOf="@id/backgroundSector" />
+
+    <com.example.myapplication.widget.ArcView
+        android:id="@+id/arcView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:arcGradientEnd="@color/goldenrod"
+        app:arcGradientStart="@color/goldenrod"
+        app:arcRadius="105dp"
+        app:arcStartAngle="180"
+        app:arcStroke="4dp"
+        app:arcSweepAngle="90"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintEnd_toEndOf="@id/round1"
+        app:layout_constraintStart_toStartOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentHumidityAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="58%"
+        android:textAppearance="@style/harmonysans"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@id/round1"
+        app:layout_constraintStart_toStartOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentHumidityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="@string/current_indoor_humidity"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/round1"
+        app:layout_constraintStart_toStartOf="@id/round1"
+        app:layout_constraintTop_toBottomOf="@id/currentHumidityAmount" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec3.1"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="35dp"
+        app:cardBackgroundColor="@color/cornsilk"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toStartOf="@id/rec3.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/humidityImgAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/humidity_alt"
+        app:layout_constraintBottom_toBottomOf="@id/rec3.1"
+        app:layout_constraintStart_toStartOf="@id/rec3.1"
+        app:layout_constraintTop_toTopOf="@id/rec3.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentHumidityTextAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/current_humidity"
+        android:textAppearance="@style/harmonysans"
+        android:textColor="@color/lightblack"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/rec3.1"
+        app:layout_constraintTop_toTopOf="@id/rec3.1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentHumidityAmountAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:text="58%"
+        android:textAppearance="@style/harmonysans"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/currentHumidityTextAlt"
+        app:layout_constraintTop_toBottomOf="@id/currentHumidityTextAlt" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec3.2"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="@color/cornsilk"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rec3.1"
+        app:layout_constraintTop_toTopOf="@id/rec3.1"
+        app:strokeWidth="0dp" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/snowflakeAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/snowflake_alt"
+        app:layout_constraintBottom_toBottomOf="@id/rec3.2"
+        app:layout_constraintStart_toStartOf="@id/rec3.2"
+        app:layout_constraintTop_toTopOf="@id/rec3.2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/presetHumidityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/preset_humidity"
+        android:textAppearance="@style/harmonysans"
+        android:textColor="@color/lightblack"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/rec3.2"
+        app:layout_constraintTop_toTopOf="@id/rec3.2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/presetHumidityAmountAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:text="50%"
+        android:textAppearance="@style/harmonysans"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/presetHumidityText"
+        app:layout_constraintTop_toBottomOf="@id/presetHumidityText" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@id/rec4"
+        android:layout_width="360dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/cornsilk"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec3.1"
+        app:strokeWidth="0dp" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/setHumidityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/preset_humidity"
+        android:textAppearance="@style/harmonysans"
+        android:textColor="@color/lightblack"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/rec4"
+        app:layout_constraintStart_toStartOf="@id/rec4"
+        app:layout_constraintEnd_toEndOf="@id/rec4"
+        />
+    <com.google.android.material.slider.Slider
+        android:id="@+id/humiditySetSlider"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:value="40"
+        android:valueFrom="30"
+        android:valueTo="80"
+        app:tickVisible="true"
+        app:tickColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/rec4"
+        app:layout_constraintStart_toStartOf="@id/rec4"
+        app:layout_constraintTop_toTopOf="@id/rec4"
+        app:thumbColor="@color/white"
+        app:thumbRadius="30dp"
+        app:thumbStrokeColor="@color/goldenrod"
+        app:thumbStrokeWidth="5dp"
+        app:trackColorActive="@color/goldenrod"
+        app:trackColorInactive="@color/white"
+        app:trackHeight="60dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,4 +18,7 @@
     <color name="magenta">#cd06ff</color>
     <color name="aliceblue">#ebf0ff</color>
     <color name="lightblack">#66000000</color>
+    <color name="cornsilk">#fdf5da</color>
+    <color name="goldenrod">#f5cb38</color>
+    <color name="linen">#f0efeb</color>
 </resources>
