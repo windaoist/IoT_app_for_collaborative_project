@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.airQualityFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backstep"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/backstep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/airMonitorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/airquality"
+        android:textAppearance="@style/pmzd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.myapplication.widget.RadialGradientView
+        android:id="@+id/gradientBackground"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/airMonitorTitle"
+        app:radialGradientEnd="@color/mediumseagreen_trans"
+        app:radialGradientStart="@color/mediumseagreen"
+        app:radialRadius="150dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pm2.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/pm2.5"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/gradientBackground"
+        app:layout_constraintStart_toStartOf="@id/gradientBackground"
+        app:layout_constraintTop_toTopOf="@id/gradientBackground" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pm2.5Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="026"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="72sp"
+        app:layout_constraintEnd_toEndOf="@id/gradientBackground"
+        app:layout_constraintStart_toStartOf="@id/gradientBackground"
+        app:layout_constraintTop_toTopOf="@id/gradientBackground" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/airCondText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="@string/air_cond_good"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/gradientBackground"
+        app:layout_constraintStart_toStartOf="@id/gradientBackground"
+        app:layout_constraintTop_toTopOf="@id/gradientBackground" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec1"
+        android:layout_width="362dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="55dp"
+        app:cardBackgroundColor="@color/mediumseagreen_trans"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gradientBackground"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/powerButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="18dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/rec1"
+        app:layout_constraintStart_toStartOf="@+id/rec1"
+        app:layout_constraintTop_toTopOf="@+id/rec1"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/powerButtonImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/greyswitch"
+        app:layout_constraintBottom_toBottomOf="@+id/powerButton"
+        app:layout_constraintEnd_toEndOf="@+id/powerButton"
+        app:layout_constraintStart_toStartOf="@+id/powerButton"
+        app:layout_constraintTop_toTopOf="@+id/powerButton" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/powerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/power_off"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="24sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rec1"
+        app:layout_constraintStart_toEndOf="@+id/powerButton"
+        app:layout_constraintTop_toTopOf="@+id/rec1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec2"
+        android:layout_width="362dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rec1"
+        app:cardBackgroundColor="@color/mediumseagreen_trans"
+        app:cardCornerRadius="20dp"
+        app:strokeWidth="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

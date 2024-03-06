@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RadialGradientView">
+        <!--        兼容用系统属性-->
+        <attr name="android:layout_width" format="dimension" />
+        <attr name="android:layout_height" format="dimension" />
+        <!--        自定义属性-->
+        <attr name="radialGradientStart" format="color" />
+        <attr name="radialGradientEnd" format="color" />
+        <attr name="radialRadius" format="dimension" />
+    </declare-styleable>
+</resources>

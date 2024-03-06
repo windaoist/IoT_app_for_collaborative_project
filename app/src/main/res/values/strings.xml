@@ -45,4 +45,8 @@
     <string name="current_indoor_humidity">当前室内湿度</string>
     <string name="current_humidity">当前湿度</string>
     <string name="preset_humidity">设定湿度</string>
+    <string name="pm2.5">PM2.5(ug/m³)</string>
+    <string name="air_cond_good">空气优</string>
+    <string name="power_off">关闭</string>
+    <string name="power_on">开启</string>
 </resources>
