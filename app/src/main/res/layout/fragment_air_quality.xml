@@ -93,13 +93,13 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="18dp"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/tomato"
         app:layout_constraintBottom_toBottomOf="@+id/rec1"
         app:layout_constraintStart_toStartOf="@+id/rec1"
         app:layout_constraintTop_toTopOf="@+id/rec1"
         app:shapeAppearance="@style/circle"
         app:strokeWidth="0dp" />
-
+    <!--计划：将电源图标分为四个-->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/powerButtonImg"
         android:layout_width="35dp"
@@ -114,10 +114,10 @@
         android:id="@+id/powerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="@string/power_off"
         android:textAppearance="@style/sourcehansans"
         android:textSize="24sp"
-        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/rec1"
         app:layout_constraintStart_toEndOf="@+id/powerButton"
         app:layout_constraintTop_toTopOf="@+id/rec1" />
@@ -127,10 +127,241 @@
         android:layout_width="362dp"
         android:layout_height="135dp"
         android:layout_marginTop="18dp"
+        app:cardBackgroundColor="@color/mediumseagreen_trans"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rec1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/intelButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/sleepButton"
+        app:layout_constraintStart_toStartOf="@+id/rec2"
+        app:layout_constraintTop_toTopOf="@+id/rec2"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/intelButtonImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a"
+        app:layout_constraintBottom_toBottomOf="@id/intelButton"
+        app:layout_constraintEnd_toEndOf="@id/intelButton"
+        app:layout_constraintStart_toStartOf="@id/intelButton"
+        app:layout_constraintTop_toTopOf="@id/intelButton" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/intelButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="@string/intel"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/intelButton"
+        app:layout_constraintStart_toStartOf="@+id/intelButton"
+        app:layout_constraintTop_toBottomOf="@+id/intelButton" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sleepButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@id/recycleButton"
+        app:layout_constraintStart_toEndOf="@+id/intelButton"
+        app:layout_constraintTop_toTopOf="@+id/intelButton"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sleepButtonImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/moon"
+        app:layout_constraintBottom_toBottomOf="@id/sleepButton"
+        app:layout_constraintEnd_toEndOf="@id/sleepButton"
+        app:layout_constraintStart_toStartOf="@id/sleepButton"
+        app:layout_constraintTop_toTopOf="@id/sleepButton" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sleepButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="@string/sleep"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/sleepButton"
+        app:layout_constraintStart_toStartOf="@+id/sleepButton"
+        app:layout_constraintTop_toBottomOf="@+id/sleepButton" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/recycleButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@id/fanButton"
+        app:layout_constraintStart_toEndOf="@+id/sleepButton"
+        app:layout_constraintTop_toTopOf="@+id/intelButton"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/recycleButtonImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/recycle"
+        app:layout_constraintBottom_toBottomOf="@id/recycleButton"
+        app:layout_constraintEnd_toEndOf="@id/recycleButton"
+        app:layout_constraintStart_toStartOf="@id/recycleButton"
+        app:layout_constraintTop_toTopOf="@id/recycleButton" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/recycleButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="@string/purify"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/recycleButton"
+        app:layout_constraintStart_toStartOf="@+id/recycleButton"
+        app:layout_constraintTop_toBottomOf="@+id/recycleButton" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fanButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/rec2"
+        app:layout_constraintStart_toEndOf="@+id/recycleButton"
+        app:layout_constraintTop_toTopOf="@+id/intelButton"
+        app:shapeAppearance="@style/circle"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fanButtonImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wind_speed"
+        app:layout_constraintBottom_toBottomOf="@id/fanButton"
+        app:layout_constraintEnd_toEndOf="@id/fanButton"
+        app:layout_constraintStart_toStartOf="@id/fanButton"
+        app:layout_constraintTop_toTopOf="@id/fanButton" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fanButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="@string/fan"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/fanButton"
+        app:layout_constraintStart_toStartOf="@+id/fanButton"
+        app:layout_constraintTop_toBottomOf="@+id/fanButton" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec3"
+        android:layout_width="362dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="18dp"
         app:cardBackgroundColor="@color/mediumseagreen_trans"
         app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rec2"
         app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/windSpeedConfigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wind_speed_config"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="20sp"
+        android:textColor="@color/grey"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@+id/rec3"
+        app:layout_constraintTop_toTopOf="@+id/rec3"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/twoFanButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="@+id/rec3"
+        app:layout_constraintEnd_toStartOf="@id/threeFanButton"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedConfigText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/twoFanImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/two_fans"
+        app:layout_constraintBottom_toBottomOf="@+id/twoFanButton"
+        app:layout_constraintEnd_toEndOf="@+id/twoFanButton"
+        app:layout_constraintStart_toStartOf="@+id/twoFanButton"
+        app:layout_constraintTop_toTopOf="@+id/twoFanButton" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/threeFanButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toEndOf="@+id/twoFanButton"
+        app:layout_constraintEnd_toStartOf="@id/fourFanButton"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedConfigText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/threeFanImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/three_fans"
+        app:layout_constraintBottom_toBottomOf="@+id/threeFanButton"
+        app:layout_constraintEnd_toEndOf="@+id/threeFanButton"
+        app:layout_constraintStart_toStartOf="@+id/threeFanButton"
+        app:layout_constraintTop_toTopOf="@+id/threeFanButton" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fourFanButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toEndOf="@+id/threeFanButton"
+        app:layout_constraintEnd_toStartOf="@id/fiveFanButton"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedConfigText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fourFanImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/four_fans"
+        app:layout_constraintBottom_toBottomOf="@+id/fourFanButton"
+        app:layout_constraintEnd_toEndOf="@+id/fourFanButton"
+        app:layout_constraintStart_toStartOf="@+id/fourFanButton"
+        app:layout_constraintTop_toTopOf="@+id/fourFanButton" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fiveFanButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toEndOf="@+id/fourFanButton"
+        app:layout_constraintEnd_toEndOf="@id/rec3"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedConfigText" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fiveFanImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/four_fans"
+        app:layout_constraintBottom_toBottomOf="@+id/fiveFanButton"
+        app:layout_constraintEnd_toEndOf="@+id/fiveFanButton"
+        app:layout_constraintStart_toStartOf="@+id/fiveFanButton"
+        app:layout_constraintTop_toTopOf="@+id/fiveFanButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

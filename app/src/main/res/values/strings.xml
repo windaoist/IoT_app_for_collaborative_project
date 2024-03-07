@@ -49,4 +49,8 @@
     <string name="air_cond_good">空气优</string>
     <string name="power_off">关闭</string>
     <string name="power_on">开启</string>
+    <string name="intel">智能</string>
+    <string name="sleep">睡眠</string>
+    <string name="purify">净化</string>
+    <string name="fan">风扇</string>
 </resources>
