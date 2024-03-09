@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.airQualityFragment">
+    tools:context=".ui.airQualityMonitorFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/backstep"
@@ -144,7 +144,6 @@
         app:layout_constraintTop_toTopOf="@+id/rec2"
         app:shapeAppearance="@style/circle"
         app:strokeWidth="0dp" />
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/intelButtonImg"
         android:layout_width="wrap_content"
@@ -199,7 +198,7 @@
         app:layout_constraintStart_toStartOf="@+id/sleepButton"
         app:layout_constraintTop_toBottomOf="@+id/sleepButton" />
 
-    <com.google.android.material.card.MaterialCardView
+     <com.google.android.material.card.MaterialCardView
         android:id="@+id/recycleButton"
         android:layout_width="60dp"
         android:layout_height="60dp"

@@ -13,7 +13,7 @@ import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 
-public class airQualityFragment extends Fragment {
+public class airQualityMonitorFragment extends Fragment {
 
 
     @Override
@@ -33,7 +33,7 @@ public class airQualityFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.backstep).setOnClickListener(v -> {
-            ((MainActivity)requireActivity()).switchToMainPage();
+            ((MainActivity) requireActivity()).switchToMainPage();
         });
     }
 }

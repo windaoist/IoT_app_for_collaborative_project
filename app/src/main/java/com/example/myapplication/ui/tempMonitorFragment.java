@@ -34,7 +34,7 @@ public class tempMonitorFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.backstep).setOnClickListener(v -> {
-            ((MainActivity)requireActivity()).switchToMainPage();
+            ((MainActivity) requireActivity()).switchToMainPage();
         });
     }
 }

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.myapplication.ui.airQualityFragment;
+import com.example.myapplication.ui.airQualityMonitorFragment;
 import com.example.myapplication.ui.devicePageFragment;
 import com.example.myapplication.ui.humidityMonitorFragment;
 import com.example.myapplication.ui.mainPageFragment;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private tempMonitorFragment tempMonitor;
     private devicePageFragment devicePage;
     private humidityMonitorFragment humidityMonitor;
-    private airQualityFragment airQualityMonitor;
+    private airQualityMonitorFragment airQualityMonitor;
 
 
     @Override
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         tempMonitor = new tempMonitorFragment();
         humidityMonitor=new humidityMonitorFragment();
         devicePage = new devicePageFragment();
-        airQualityMonitor=new airQualityFragment();
+        airQualityMonitor=new airQualityMonitorFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment_container_main, mainPage);
