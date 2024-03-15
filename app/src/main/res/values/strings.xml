@@ -38,7 +38,6 @@
     <string name="wind_speed_config">风速调节</string>
     <string name="hundred">100</string>
     <string name="zero">0</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="humidifier">加湿器</string>
     <string name="dehumidify">除湿</string>
@@ -53,4 +52,12 @@
     <string name="sleep">睡眠</string>
     <string name="purify">净化</string>
     <string name="fan">风扇</string>
+    <string name="my_data">我的数据</string>
+    <string name="pet_feeding">宠物投喂</string>
+    <string name="family_member">家庭成员</string>
+    <string name="family_name">家庭名称</string>
+    <string name="family_device">家庭设备</string>
+    <string name="family_room">家庭房间</string>
+    <string name="service_center">服务中心</string>
+    <string name="help_center">帮助中心</string>
 </resources>

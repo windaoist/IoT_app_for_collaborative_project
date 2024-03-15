@@ -12,13 +12,10 @@ import androidx.fragment.app.Fragment;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
-import java.util.Objects;
+public class homePageFragment extends Fragment {
 
 
-public class mainPageFragment extends Fragment {
-
-
-    public mainPageFragment() {
+    public homePageFragment() {
         // Required empty public constructor
     }
 
@@ -31,7 +28,7 @@ public class mainPageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main_page, container, false);
+        return inflater.inflate(R.layout.fragment_home_page, container, false);
     }
 
     @Override

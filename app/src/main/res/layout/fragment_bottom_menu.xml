@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottombar"
         android:layout_width="0dp"
@@ -12,8 +13,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/markCircle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:strokeWidth="0dp"
+        android:layout_marginTop="-12dp"
+        app:shapeAppearance="@style/circle"
+        app:cardBackgroundColor="@color/rebeccapurple"
+        app:layout_constraintTop_toTopOf="@id/homepageText"
+        app:layout_constraintBottom_toBottomOf="@id/homepageText"
+        app:layout_constraintStart_toStartOf="@id/homepageText"
+        app:layout_constraintEnd_toEndOf="@id/homepageText"
+        />
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/homepageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,15 +34,16 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="8dp"
         android:drawablePadding="-10dp"
+        android:textColor="@color/white"
         android:text="@string/homepage"
         android:textAppearance="@style/sourcehanserif"
         android:textSize="15sp"
-        app:drawableTopCompat="@drawable/homepage"
+        app:drawableTopCompat="@drawable/homepage_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/bottombar" />
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/deviceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +57,7 @@
         app:layout_constraintEnd_toStartOf="@id/dataText"
         app:layout_constraintStart_toEndOf="@id/homepageText" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/dataText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +71,7 @@
         app:layout_constraintEnd_toStartOf="@id/mineText"
         app:layout_constraintStart_toEndOf="@id/deviceText" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/mineText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,4 +84,6 @@
         app:drawableTopCompat="@drawable/mine"
         app:layout_constraintBottom_toBottomOf="@id/homepageText"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

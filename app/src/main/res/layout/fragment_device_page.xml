@@ -34,7 +34,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="102dp"
         android:contentDescription="@string/addition"
-        android:src="@drawable/addition_circle"
+        android:src="@drawable/addition_circle_white"
         app:layout_constraintBottom_toBottomOf="@id/myDeviceText"
         app:layout_constraintStart_toEndOf="@id/myDeviceText"
         app:layout_constraintTop_toTopOf="@id/myDeviceText" />

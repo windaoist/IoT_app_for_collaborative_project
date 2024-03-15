@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MinePageFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/round1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/lightgrey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ownerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:gravity="top"
+        android:text="@string/owner"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/round1"
+        app:layout_constraintStart_toEndOf="@id/round1"
+        app:layout_constraintTop_toTopOf="@id/round1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/additionImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:contentDescription="@string/addition"
+        android:src="@drawable/addition_circle_black"
+        app:layout_constraintBottom_toBottomOf="@id/ownerText"
+        app:layout_constraintStart_toEndOf="@id/ownerText"
+        app:layout_constraintTop_toTopOf="@id/ownerText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec1"
+        android:layout_width="369dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/lavender"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round1"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/familyMemberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/family_member"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/rec1"
+        app:layout_constraintTop_toTopOf="@id/rec1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="没看懂这里怎么显示"
+        android:textAppearance="@style/sourcehansans"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rec1"
+        app:layout_constraintEnd_toEndOf="@id/rec1"
+        app:layout_constraintStart_toStartOf="@+id/rec1"
+        app:layout_constraintTop_toTopOf="@+id/rec1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rec2"
+        android:layout_width="369dp"
+        android:layout_height="325dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/lavender"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rec1"
+        app:strokeWidth="0dp" />
+    <LinearLayout
+        android:id="@+id/MinePageSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@id/rec2"
+        app:layout_constraintEnd_toEndOf="@id/rec2"
+        app:layout_constraintStart_toStartOf="@id/rec2"
+        app:layout_constraintBottom_toBottomOf="@id/rec2"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/familyName"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/familyNameImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/suggestion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/familyNameText"
+                app:layout_constraintStart_toStartOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/familyNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:drawableEnd="@drawable/forwardstep"
+                android:drawablePadding="185dp"
+                android:text="@string/family_name"
+                android:textAppearance="@style/sourcehansans"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/familyNameImg"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/divideLine1"
+            android:layout_width="360dp"
+            android:layout_height="5dp"
+            app:cardBackgroundColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/familyDevice"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/familyDeviceImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/device"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/familyDeviceText"
+                app:layout_constraintStart_toStartOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/familyDeviceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:drawableEnd="@drawable/forwardstep"
+                android:drawablePadding="185dp"
+                android:text="@string/family_device"
+                android:textAppearance="@style/sourcehansans"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/familyDeviceImg"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/divideLine2"
+            android:layout_width="360dp"
+            android:layout_height="5dp"
+            app:cardBackgroundColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/familyRoom"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/familyRoomImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/homepage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/familyRoomText"
+                app:layout_constraintStart_toStartOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/familyRoomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:drawableEnd="@drawable/forwardstep"
+                android:drawablePadding="185dp"
+                android:text="@string/family_room"
+                android:textAppearance="@style/sourcehansans"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/familyRoomImg"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/divideLine3"
+            android:layout_width="360dp"
+            android:layout_height="5dp"
+            app:cardBackgroundColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serviceCenter"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/serviceCenterImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/service"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/serviceCenterText"
+                app:layout_constraintStart_toStartOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/serviceCenterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:drawableEnd="@drawable/forwardstep"
+                android:drawablePadding="185dp"
+                android:text="@string/service_center"
+                android:textAppearance="@style/sourcehansans"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/serviceCenterImg"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/divideLine4"
+            android:layout_width="360dp"
+            android:layout_height="5dp"
+            app:cardBackgroundColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/helpCenter"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/helpCenterImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/help"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/helpCenterText"
+                app:layout_constraintStart_toStartOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/helpCenterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:drawableEnd="@drawable/forwardstep"
+                android:drawablePadding="185dp"
+                android:text="@string/help_center"
+                android:textAppearance="@style/sourcehansans"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/helpCenterImg"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

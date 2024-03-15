@@ -35,7 +35,6 @@
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">50%</item>
     </style>
-
     <style name="normalSwitch" parent="Theme.AppCompat.Light">
         <item name="colorControlActivated">@color/royalblue</item>
         <item name="colorSwitchThumbNormal">@color/grey</item>
