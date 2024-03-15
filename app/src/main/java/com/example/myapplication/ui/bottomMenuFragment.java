@@ -41,5 +41,6 @@ public class bottomMenuFragment extends Fragment {
         //转换事件监听器
         view.findViewById(R.id.homepageText).setOnClickListener(v -> ((MainActivity) requireActivity()).switchToMainPage());
         view.findViewById(R.id.deviceText).setOnClickListener(v -> ((MainActivity) requireActivity()).switchToDevicePage());
+        view.findViewById(R.id.dataText).setOnClickListener(v -> ((MainActivity) requireActivity()).switchToDataPage());
     }
 }

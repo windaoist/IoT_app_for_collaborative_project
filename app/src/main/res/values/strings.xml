@@ -53,4 +53,6 @@
     <string name="sleep">睡眠</string>
     <string name="purify">净化</string>
     <string name="fan">风扇</string>
+    <string name="my_data">我的数据</string>
+    <string name="pet_feeding">宠物投喂</string>
 </resources>
